@@ -1,0 +1,35 @@
+.hiddenList {
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.hiddenList__button {
+    border: none;
+    background-color: initial;
+    color: #008080;
+    font-size: 18px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.hiddenList__button:hover {
+    color: #01b2b2;
+}
+
+.hiddenList__button:active {
+    color: #01b2b2;
+}
+
+.hiddenList__button:disabled{
+    color:#dddf;
+}
+
+@media (max-width:767px) {
+    .hiddenList {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

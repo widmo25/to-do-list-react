@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Buttons = (props) => {
+const HiddenList = (props) => {
     if (props.tasks.length === 0) {
         return null;
     }
@@ -22,4 +22,4 @@ const Buttons = (props) => {
     )
 };
 
-export default Buttons;
+export default HiddenList;

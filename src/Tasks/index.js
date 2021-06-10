@@ -9,7 +9,7 @@ const Tasks = (props) => (
                 <button className="list__button">
                     {task.done ? "✔" : ""}
                 </button>
-                <p className={`list__task\ ${task.done ? "list__task--done" : ""}`}>
+                <p className={`list__task ${task.done ? "list__task--done" : ""}`}>
                     {task.content}
                 </p>
                 <button className="list__button list__button--higligthed">

@@ -8,7 +8,7 @@ const HiddenList = (props) => {
         <ul className="hiddenList">
             <li className="hiddenList__item\">
                 <button className="hiddenList__button">
-                    {props.hideTask ? "Pokaż" : "Ukryj"} ukończone
+                    {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
             </li>
             <li className="hiddenList__item\">

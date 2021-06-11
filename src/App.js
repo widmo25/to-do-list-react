@@ -1,6 +1,6 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
-import HiddenList from "./HiddenList"
+import Buttons from "./Buttons"
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container"
@@ -18,7 +18,7 @@ function App() {
       <Header title="Lista Zadań" />
       <main>
         <Section title="Dodaj nowe Zadanie" body={<Form />} />
-        <Section title="Lista zadań" extraBodyContent={<HiddenList tasks={tasks} hideDone={hideDone}/>} body={<Tasks tasks={tasks} hideDone={hideDone} />} />
+        <Section title="Lista zadań" extraBodyContent={<Buttons tasks={tasks} hideDone={hideDone}/>} body={<Tasks tasks={tasks} hideDone={hideDone} />} />
       </main>
     </Container>
   )

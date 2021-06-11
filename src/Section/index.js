@@ -1,8 +1,11 @@
 import "./style.css"
 
-const Section = ({ title, body }) => (
+const Section = ({ title, body, extraBodyContent }) => (
     <section className="section">
-        <h2 className="section__head">{title}</h2>
+        <div className="section section--higlighted">
+            <h2 className="section__head section__head--higlighted">{title}</h2>
+            {extraBodyContent}
+        </div>
         {body}
     </section>
 )

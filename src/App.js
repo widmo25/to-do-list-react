@@ -18,11 +18,9 @@ function App() {
       <Header title="Lista Zadań" />
       <main>
         <Section title="Dodaj nowe Zadanie" body={<Form />} />
-        <Section title="Lista zadań" body={<HiddenList tasks={tasks} hideDone={hideDone} />} />
-        <Section body={<Tasks tasks={tasks} hideDone={hideDone} />} />
+        <Section title="Lista zadań" extraBodyContent={<HiddenList tasks={tasks} hideDone={hideDone}/>} body={<Tasks tasks={tasks} hideDone={hideDone} />} />
       </main>
     </Container>
   )
 };
-
 export default App;

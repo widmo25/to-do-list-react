@@ -21,7 +21,7 @@ const Form = ({ addNewTask }) => {
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
             <button
-                className="form__button">Dodaj zadanie</button>
+                className="form__button" disabled={newTaskContent.trim() === ""}>Dodaj zadanie</button>
         </form>
     )
 }

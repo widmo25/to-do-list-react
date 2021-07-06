@@ -11,7 +11,7 @@ function App() {
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  }
+  };
 
   const [tasks, setTasks] = useState([
     { id: 1, content: "Uczyć sie Reacta", done: false },
@@ -20,7 +20,7 @@ function App() {
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
-  }
+  };
 
   const toggleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
@@ -33,7 +33,7 @@ function App() {
 
   const setAllDone = () => {
     setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
-  }
+  };
 
   const addNewTask = (newTaskContent) => {
     setTasks(tasks => [
@@ -44,7 +44,7 @@ function App() {
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
       }
     ])
-  }
+  };
 
   return (
     <Container>

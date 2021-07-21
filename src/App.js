@@ -13,12 +13,7 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
-  const readSavedTasks = () => {
-    const savedTask = localStorage.getItem("tasks")
-    return savedTask ? JSON.parse(savedTask) : []
-  }
-
-  const [tasks, setTasks] = useState(readSavedTasks);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
@@ -50,7 +45,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
-  })
+  }, [tasks]);
 
   return (
     <Container>
